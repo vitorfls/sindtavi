@@ -1,0 +1,28 @@
+SELECT * FROM `associados` WHERE 1;
+id	nome	email	telefone	cpf_cnpj	status	created_at	asaas_customer_id	tipo	ponto	ponto_uf	ponto_logradouro	ponto_municipio	veiculo	veiculo_marca	veiculo_combustivel	veiculo_cor	contrato	contrato_ano	contrato_data_inicio	
+8	Teste Mock	teste.mock@email.com	(11) 99999-9999	09946469766	1	2024-12-12 23:52:43	cus_000006395908	D		ES								0	0000-00-00	
+15	Paulinho	vitorfls@gmail.com	(27) 99771-4908	09946469767	1	2024-12-13 02:35:32	cus_000006396028	D		ES					Gasolina			2010	0000-00-00	
+16	João da Silva	joao.silva@email.com	(11) 99999-9999	12345678909	1	2024-12-13 04:11:55	NULL	D		ES								2025	0000-00-00	
+
+SELECT * FROM `vw_cobrancas` WHERE 1;
+associado_nome	associado_tipo	associado_status	associado_municipio	associado_veiculo	id	associado_id	asaas_id	valor	vencimento	data_pagamento	linha_digitavel	link_boleto	criado_em	atualizado_em	tipo_cobranca_id	status_cobranca_id	dias_vencimento	tipo_cobranca	status_cobranca	
+Teste Mock	D	1			3	8	pay_o1dt2eb2cfei7ron	150.00	2024-12-20	2024-12-12	NULL	https://sandbox.asaas.com/b/pdf/o1dt2eb2cfei7ron	2024-12-12 23:52:44	2024-12-13 00:20:34	1	1	7	Taxas	PENDING	
+Paulinho	D	1			5	15	pay_1cffdhk5h50jntx9	55.90	2024-12-20	NULL	NULL	https://sandbox.asaas.com/b/pdf/1cffdhk5h50jntx9	2024-12-13 02:36:51	2024-12-13 02:36:51	1	1	7	Taxas	PENDING	
+
+SELECT * FROM `status_cobrancas` WHERE 1;
+id	status	
+3	CONFIRMED	
+4	OVERDUE	
+1	PENDING	
+2	RECEIVED	
+5	RECEIVED_IN_CASH	
+
+SELECT * FROM `tipos_cobranca` WHERE 1;
+1	Taxas	Taxas e cobranças gerais	1	2024-12-13 02:43:04	
+
+
+
+SELECT * FROM `vw_cobrancas`
+associado_nome	associado_tipo	associado_status	associado_municipio	associado_veiculo	id	associado_id	asaas_id	valor	vencimento	data_pagamento	linha_digitavel	link_boleto	criado_em	atualizado_em	tipo_cobranca_id	status_cobranca_id	dias_vencimento	tipo_cobranca	status_cobranca	
+Teste Mock	D	1			3	8	pay_o1dt2eb2cfei7ron	150.00	2024-12-20	2024-12-12	NULL	https://sandbox.asaas.com/b/pdf/o1dt2eb2cfei7ron	2024-12-12 23:52:44	2024-12-13 00:20:34	1	1	7	Taxas	PENDING	
+Paulinho	D	1			5	15	pay_1cffdhk5h50jntx9	55.90	2024-12-20	NULL	NULL	https://sandbox.asaas.com/b/pdf/1cffdhk5h50jntx9	2024-12-13 02:36:51	2024-12-13 02:36:51	1	1	7	Taxas	PENDING	

@@ -1,0 +1,311 @@
+/* Variáveis */
+:root {
+    --header-height: 64px;
+    --primary-color: #4361ee;
+    --success-color: #2ec4b6;
+    --warning-color: #ff9f1c;
+    --danger-color: #e71d36;
+    --dark-color: #2b2d42;
+    --gray-color: #8d99ae;
+    --light-color: #edf2f4;
+    --transition: all 0.3s ease;
+}
+
+/* Reset e Base */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.header-content {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.header-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-nav a {
+    color: var(--gray-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    color: var(--primary-color);
+    background: rgba(67, 97, 238, 0.1);
+}
+
+/* Main Content */
+.main-content {
+    margin-top: var(--header-height);
+    padding: 2rem 0;
+}
+
+/* Page Header */
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.page-subtitle {
+    color: var(--gray-color);
+    margin: 0.25rem 0 0;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 1.25rem;
+}
+
+.card-title {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* Stat Cards */
+.stat-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.stat-card-title {
+    color: var(--gray-color);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 1rem;
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-card-icon.success {
+    background: rgba(46, 196, 182, 0.1);
+    color: var(--success-color);
+}
+
+.stat-card-icon.warning {
+    background: rgba(255, 159, 28, 0.1);
+    color: var(--warning-color);
+}
+
+.stat-card-icon.danger {
+    background: rgba(231, 29, 54, 0.1);
+    color: var(--danger-color);
+}
+
+/* Tabelas */
+.table {
+    margin: 0;
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--gray-color);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 1rem 1.25rem;
+    border-bottom-width: 1px;
+}
+
+.table td {
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(67, 97, 238, 0.02);
+}
+
+/* Badges */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+.badge.rounded-pill {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+/* Botões */
+.btn {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lista de Vencimentos */
+.vencimentos-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.vencimento-item {
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--dark-color);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transition: var(--transition);
+}
+
+.vencimento-item:last-child {
+    border-bottom: none;
+}
+
+.vencimento-item:hover {
+    background-color: rgba(67, 97, 238, 0.02);
+}
+
+.vencimento-info h6 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.vencimento-valor {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Formulários */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem;
+}
+
+.input-group-text {
+    background: none;
+    border-color: rgba(0,0,0,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    border-radius: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-item i {
+    font-size: 1.25rem;
+    color: var(--gray-color);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
